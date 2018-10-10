@@ -11,16 +11,16 @@ using namespace std;
 
 class animal {
 
-private:
+protected:
     int age;
-    static long id;
+    long id;
     bool alive;
     double location[2];
 
 public:
     animal();
     animal(int age, double c1, double c2);
-    virtual void move(double c1, double c2);
+    virtual void move(double coords[2]);
     animal(const animal&);
     virtual ~animal();
     virtual void sleep();
