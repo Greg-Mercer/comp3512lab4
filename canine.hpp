@@ -15,10 +15,10 @@ public:
     void move(double coords[2]) override;
     canine(const canine& old);
     ~canine() override;
-    void sleep() override;
-    void eat() override;
+    void sleep() const override;
+    void eat() const override;
     friend ostream& operator<<(ostream& os, const canine& b);
-    void hunt();
+    void hunt() const;
 };
 
 

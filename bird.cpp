@@ -39,11 +39,11 @@ bird::~bird() {
     cout << "Destroying bird..." << endl;
 }
 
-void bird::sleep() {
+void bird::sleep() const {
     cout << "Bird sleeping..." << endl;
 }
 
-void bird::eat() {
+void bird::eat() const {
     cout << "Bird eating..." << endl;
 }
 

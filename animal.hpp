@@ -23,8 +23,8 @@ public:
     virtual void move(double coords[2]);
     animal(const animal&);
     virtual ~animal();
-    virtual void sleep();
-    virtual void eat();
+    virtual void sleep() const;
+    virtual void eat() const;
     friend ostream& operator<<(ostream& os, const animal& a);
 };
 

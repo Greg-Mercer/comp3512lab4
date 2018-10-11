@@ -43,11 +43,11 @@ animal::~animal() {
     cout << "Destroying animal..." << endl;
 }
 
-void animal::sleep() {
+void animal::sleep() const {
     cout << "Animal sleeping..." << endl;
 }
 
-void animal::eat() {
+void animal::eat() const {
     cout << "Animal eating..." << endl;
 }
 

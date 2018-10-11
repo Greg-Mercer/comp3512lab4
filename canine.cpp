@@ -46,11 +46,11 @@ canine::~canine() {
     cout << "Destroying canine..." << endl;
 }
 
-void canine::sleep() {
+void canine::sleep() const {
     cout << "Canine sleeping..." << endl;
 }
 
-void canine::eat() {
+void canine::eat() const {
     cout << "Canine eating..." << endl;
 }
 
@@ -60,6 +60,6 @@ ostream& operator<<(ostream& os, const canine& c) {
     return os;
 }
 
-void canine::hunt() {
+void canine::hunt() const {
     cout << "Canine hunting..." << endl;
 }

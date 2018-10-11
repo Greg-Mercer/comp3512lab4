@@ -18,8 +18,8 @@ public:
     void move(double coords[3]) override;
     bird(const bird& old);
     ~bird() override;
-    void sleep() override;
-    void eat() override;
+    void sleep() const override;
+    void eat() const override;
     friend ostream& operator<<(ostream& os, const bird& b);
 };
 
