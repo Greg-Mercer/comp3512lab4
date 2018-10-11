@@ -10,7 +10,7 @@ using namespace std;
 animal::animal() {
     cout << "Constructing animal..." << endl;
     age = 0;
-    id = 0; // todo: generate unique id
+    id = (unsigned long)this;
     alive = true;
     location[0] = 0.0;
     location[1] = 0.0;
@@ -19,7 +19,7 @@ animal::animal() {
 animal::animal(int age, double c1, double c2) {
     cout << "Constructing animal..." << endl;
     this->age = age;
-    id = 0; // todo: generate unique id
+    id = (unsigned long)this;
     alive = true;
     location[0] = c1;
     location[1] = c2;

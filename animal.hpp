@@ -13,7 +13,7 @@ class animal {
 
 protected:
     int age;
-    long id;
+    unsigned long id;
     bool alive;
     double location[2];
 
