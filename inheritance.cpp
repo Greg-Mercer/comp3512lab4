@@ -15,7 +15,7 @@ int main() {
     double locations1[] = {2.4, 3.5};
     double locations2[] = {2.4, 3.5, 4.6};
 
-    animal* ap1 = new animal;
+    auto* ap1 = new animal;
     animal* ap2 = new bird;
     animal* ap3 = new canine;
 
@@ -35,7 +35,7 @@ int main() {
 
     ap3->eat();
     ap3->sleep();
-    static_cast<canine *>(ap3)->hunt();
+    dynamic_cast<canine *>(ap3)->hunt();
 
     canine c; // static allocation, for demonstrating destruction
 
