@@ -25,7 +25,7 @@ animal::animal(int age, double c1, double c2) {
     location[1] = c2;
 }
 
-void animal::move(double coords[2]) {
+void animal::move(double coords[]) {
     location[0] = coords[0];
     location[1] = coords[1];
 }
@@ -52,7 +52,11 @@ void animal::eat() const {
 }
 
 ostream& operator<<(ostream& os, const animal& a) {
-    os << "Animal: age=" << a.age << ", id=" << a.id << ", alive=" << a.alive << ", location=[" << a.location[0]
-        << "," << a.location[1] << "]" << endl;
+    return a.output(os);
+}
+
+ostream& animal::output(ostream& os) const {
+    os << "Animal: age=" << age << ", id=" << id << ", alive=" << alive << ", location=[" << location[0]
+       << "," << location[1] << "]" << endl;
     return os;
 }

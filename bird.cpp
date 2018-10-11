@@ -8,7 +8,7 @@ bird::bird() {
     cout << "Constructing bird..." << endl;
     location[0] = 0.0;
     location[1] = 0.0;
-    location[3] = 0.0;
+    location[2] = 0.0;
 }
 
 bird::bird(int age, double c1, double c2, double c3) {
@@ -19,7 +19,7 @@ bird::bird(int age, double c1, double c2, double c3) {
     location[2] = c3;
 }
 
-void bird::move(double coords[3]) {
+void bird::move(double coords[]) {
     location[0] = coords[0];
     location[1] = coords[1];
     location[2] = coords[2];
@@ -47,8 +47,8 @@ void bird::eat() const {
     cout << "Bird eating..." << endl;
 }
 
-ostream& operator<<(ostream& os, const bird& b) {
-    os << "Bird: age=" << b.age << ", id=" << b.id << ", alive=" << b.alive << ", location=[" << b.location[0]
-       << "," << b.location[1] << "," << b.location[2] << "]" << endl;
+ostream& bird::output(ostream& os) const {
+    os << "Bird: age=" << age << ", id=" << id << ", alive=" << alive << ", location=[" << location[0]
+       << "," << location[1] << "," << location[2] << "]" << endl;
     return os;
 }

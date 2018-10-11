@@ -12,13 +12,13 @@ class canine : public animal {
 public:
     canine();
     canine(int age, double c1, double c2);
-    void move(double coords[2]) override;
+    void move(double coords[]) override;
     canine(const canine& old);
     ~canine() override;
     void sleep() const override;
     void eat() const override;
-    friend ostream& operator<<(ostream& os, const canine& b);
     void hunt() const;
+    ostream& output(ostream& os) const override;
 };
 
 

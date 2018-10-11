@@ -9,18 +9,15 @@
 
 class bird : public animal {
 
-private:
-    double location[3];
-
 public:
     bird();
     bird(int age, double c1, double c2, double c3);
-    void move(double coords[3]) override;
+    void move(double coords[]) override;
     bird(const bird& old);
     ~bird() override;
     void sleep() const override;
     void eat() const override;
-    friend ostream& operator<<(ostream& os, const bird& b);
+    ostream& output(ostream& os) const override;
 };
 
 

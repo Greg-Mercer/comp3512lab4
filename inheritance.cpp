@@ -12,24 +12,32 @@ using namespace std;
 
 int main() {
 
-    animal a;
-    bird b;
-    canine c;
+    double locations1[] = {2.4, 3.5};
+    double locations2[] = {2.4, 3.5, 4.6};
 
-    animal& ar = a;
-    animal& br = b;
-    animal& cr = c;
+    animal* ap1 = new animal;
+    animal* ap2 = new bird;
+    animal* ap3 = new canine;
 
+    cout << *ap1 << *ap2 << *ap3;
 
-    ar.eat();
-    br.eat();
-    cr.eat();
+    ap1->move(locations1);
+    ap2->move(locations2);
+    ap3->move(locations1);
 
-    c.hunt();
+    cout << *ap1 << *ap2 << *ap3;
 
-    cout << a << b << c;
+    ap1->eat();
+    ap1->sleep();
 
-    cout << ar << br << cr;
+    ap2->eat();
+    ap2->sleep();
+
+    ap3->eat();
+    ap3->sleep();
+    static_cast<canine *>(ap3)->hunt();
+
+    canine c; // static allocation, for demonstrating destruction
 
     return 0;
 }

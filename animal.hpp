@@ -15,17 +15,18 @@ protected:
     int age;
     unsigned long id;
     bool alive;
-    double location[2];
+    double location[3];
 
 public:
     animal();
     animal(int age, double c1, double c2);
-    virtual void move(double coords[2]);
+    virtual void move(double coords[]);
     animal(const animal&);
     virtual ~animal();
     virtual void sleep() const;
     virtual void eat() const;
     friend ostream& operator<<(ostream& os, const animal& a);
+    virtual ostream& output(ostream& os) const;
 };
 
 

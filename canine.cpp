@@ -28,7 +28,7 @@ canine::canine(int age, double c1, double c2) {
     location[1] = c2;
 }
 
-void canine::move(double coords[2]) {
+void canine::move(double coords[]) {
     location[0] = coords[0];
     location[1] = coords[1];
 }
@@ -54,12 +54,12 @@ void canine::eat() const {
     cout << "Canine eating..." << endl;
 }
 
-ostream& operator<<(ostream& os, const canine& c) {
-    os << "Canine: age=" << c.age << ", id=" << c.id << ", alive="<< c.alive << ", location=[" << c.location[0]
-       << "," << c.location[1] << "]" << endl;
-    return os;
-}
-
 void canine::hunt() const {
     cout << "Canine hunting..." << endl;
+}
+
+ostream& canine::output(ostream& os) const {
+    os << "Animal: age=" << age << ", id=" << id << ", alive=" << alive << ", location=[" << location[0]
+       << "," << location[1] << "]" << endl;
+    return os;
 }
