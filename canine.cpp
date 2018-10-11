@@ -59,7 +59,7 @@ void canine::hunt() const {
 }
 
 ostream& canine::output(ostream& os) const {
-    os << "Animal: age=" << age << ", id=" << id << ", alive=" << alive << ", location=[" << location[0]
+    os << "Canine: age=" << age << ", id=" << id << ", alive=" << alive << ", location=[" << location[0]
        << "," << location[1] << "]" << endl;
     return os;
 }

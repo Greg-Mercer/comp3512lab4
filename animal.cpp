@@ -7,10 +7,13 @@
 
 using namespace std;
 
+long animal::counter = 1;
+
 animal::animal() {
     cout << "Constructing animal..." << endl;
     age = 0;
-    id = (unsigned long)this;
+    //id = (unsigned long)this;
+    id = counter++;
     alive = true;
     location[0] = 0.0;
     location[1] = 0.0;
@@ -19,7 +22,8 @@ animal::animal() {
 animal::animal(int age, double c1, double c2) {
     cout << "Constructing animal..." << endl;
     this->age = age;
-    id = (unsigned long)this;
+    //id = (unsigned long)this;
+    id = counter++;
     alive = true;
     location[0] = c1;
     location[1] = c2;

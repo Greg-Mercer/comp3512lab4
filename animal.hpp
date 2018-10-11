@@ -18,6 +18,7 @@ protected:
     double location[3];
 
 public:
+    static long counter;
     animal();
     animal(int age, double c1, double c2);
     virtual void move(double coords[]);
